@@ -1,13 +1,10 @@
 import json
 from tools import *
 
-f = open("/Users/etyates/src/github/Open-Source-Catalog/code.json","r")
-cod = json.loads(f.read())['releases']
-f.close()
-
-f = open("/Users/etyates/src/github/Open-Source-Catalog/catalog.json","r")
-cat = json.loads(f.read())
-f.close()
+with open("/Users/etyates/src/github/Open-Source-Catalog/code.json","r") as f:
+	cod = json.loads(f.read())['releases']
+with open("/Users/etyates/src/github/Open-Source-Catalog/catalog.json","r") as f:
+	cat = json.loads(f.read())
 
 def check(n):
 	for pr in cod:
